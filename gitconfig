@@ -10,7 +10,13 @@
     deleted = red
     untracked = yellow
 [user]
-    name =
-    email =
+    name = Brandon Williams
+    email = williamsbdev@gmail.com
 [push]
     default = matching
+[alias]
+    co = checkout
+    cob = checkout -b
+    who = blame
+    clean-local-branches = diff <(git branch | cut -c 3- | sort) <(git branch -r | cut -c 10- | sort) | grep "<" | cut -c 3- | xargs git branch -D
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all --no-merges # A more concise log output
